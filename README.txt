@@ -7,4 +7,4 @@ File Structure:
 ROOT (CSC327)
 |-- Week 1
 |   |-- 4167 - Parity
-|	|	|-- Parity.java
+|   |	|-- Parity.java
