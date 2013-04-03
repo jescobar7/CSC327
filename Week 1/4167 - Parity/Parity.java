@@ -8,7 +8,11 @@ class Parity {
 		try {
 			sc = new Scanner(new BufferedReader(new FileReader("input.in")));
 			while (sc.hasNext()) {
-				System.out.println(sc.next());
+				//System.out.println(sc.next());
+				String line = sc.next();
+				for (int i = 0; i < line.length() && i < 31; i++) {
+					System.out.println(line.charAt(i));
+				}
 			}
 		} 
 		finally {
