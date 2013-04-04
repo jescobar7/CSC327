@@ -5,6 +5,13 @@ A source code collection of programs done for CSC 327
 File Structure:
 ---------------
 ROOT (CSC327)
-|-- Week 1
-|   |-- 4167 - Parity
-|   |	|-- Parity.java
+'-- Week 1
+    |-- 4167 - Parity
+    |   |-- 4167 - Parity.pdf
+    |   |-- input.in
+    |   |-- Parity.java
+    | 	'-- ParityProf.java
+    '-- 4174 - Steganography
+        |-- 4174 - Steganography.pdf
+        |-- steg.in
+        '-- Steganography.java
