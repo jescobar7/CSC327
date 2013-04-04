@@ -7,12 +7,11 @@ public class Parity {
 			
 		while (true) {
 			String line = sc.nextLine();
-			if(line.equals("#"))
-				break;
-			
 			int parity = 0;
-			String output = "";
 			
+			if(line.equals("#")) {
+				break;
+			}
 			for (char c: line.toCharArray()) {
 				switch (c) {
 					case '0':
