@@ -3,9 +3,10 @@ import java.util.Scanner;
 
 class Parity {
 	public static void main(String[] args) throws IOException {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = null;
 		
 		try {
+			sc = new Scanner(new BufferedReader(new FileReader("input.in")));
 			while (sc.hasNext()) {
 				String line = sc.next();
 				int parity = 0;
