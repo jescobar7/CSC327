@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class Steganography {
 	public static void main(String[] args) throws IOException {
-		Scanner sc = new Scanner(System.in);
-		boolean checked = false;		
+		Scanner sc = new Scanner(System.in);	
 		boolean run = true;
 		String bString = "";
 		int spaces = 0;
