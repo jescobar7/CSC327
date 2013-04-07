@@ -4,27 +4,23 @@ import java.util.Scanner;
 public class Steganography {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
+		boolean checked = false;		
+		boolean run = true;
+		String bString = "";
+		int spaces = 0;
 		
-		boolean flag = true;
-		while (flag) {
+		while (run) {
 			String line = sc.nextLine();
 			
-			int spaces = 0;
-			boolean checked = false;
-			String bString = "";
-			
 			for (char c: line.toCharArray()) {
-				if (c == '#') {
-					flag = false;
-				}
 				switch (c) {
+					case '#':
+						run = false;
+						break;
 					case ' ':
-						checked = false;
 						spaces += 1;
-						//System.out.print("[SPACE]");
 						break;
 					case '*':
-						//System.out.print("[*]");
 						break;
 					default:
 						if (checked == false) {
@@ -45,9 +41,14 @@ public class Steganography {
 						break;
 				}
 			}
-			//int value = Integer.parseInt(bString, 2);
-			//System.out.println(Integer.parseInt(bString, 2));
-			System.out.println(bString);
 		}
+	}
+	
+	public static String pad(String s) {
+		String padded = s;
+		for (int i = s.length(); i < 5; i++) {
+			padded += "0";
+		}
+		return padded;
 	}
 }
