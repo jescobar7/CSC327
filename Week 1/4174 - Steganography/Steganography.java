@@ -21,23 +21,30 @@ public class Steganography {
 						spaces += 1;
 						break;
 					case '*':
+						System.out.println(decode(pad(bString)));
+						bString = "";
 						break;
 					default:
-						if (checked == false) {
-							if (spaces > 0) {
-								//bString += "Z";
+						if (spaces > 0) {
+							if (bString.length() < 5) {
 								if (spaces % 2 == 0) {
 									bString += "1";
-									//System.out.print("["+c+"]");
 								}
 								else if (spaces % 2 == 1) {
 									bString += "0";
-									//System.out.print("["+c+"]");
+								}
+							} else {
+								System.out.print(decode(bString));
+								bString = "";
+								if (spaces % 2 == 0) {
+									bString += "1";
+								}
+								else if (spaces % 2 == 1) {
+									bString += "0";
 								}
 							}
 						}
 						spaces = 0;
-						checked = true;
 						break;
 				}
 			}
