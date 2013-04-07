@@ -6,8 +6,8 @@ public class Parity {
 		Scanner sc = new Scanner(System.in);
 			
 		while (true) {
-			String line = sc.nextLine();
 			int parity = 0;
+			String line = sc.nextLine();
 			
 			if(line.equals("#")) {
 				break;
