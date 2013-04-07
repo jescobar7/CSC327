@@ -51,4 +51,39 @@ public class Steganography {
 		}
 		return padded;
 	}
+	
+	public static String decode(String m) {
+		char ch = ' ';
+		int value = Integer.parseInt(m, 2);
+		String message;
+		
+		if ( (value >= 1) && ( value <= 26)) {
+			ch = (char)(value+64);
+		} else {
+			switch (value) {
+				case 0:
+					ch = (char)(32);
+					break;
+				case 27:
+					ch = (char)(39);
+					break;
+				case 28:
+					ch = (char)(44);
+					break;
+				case 29:
+					ch = (char)(45);
+					break;
+				case 30:
+					ch = (char)(46);
+					break;
+				case 31:
+					ch = (char)(63);
+					break;
+				default:
+					break;
+			}
+		}
+		message = Character.toString(ch);
+		return message;
+	}
 }
