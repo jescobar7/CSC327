@@ -4,7 +4,7 @@ A source code collection of programs done for CSC 327
 
 File Structure:
 ---------------
-ROOT (CSC327)
+CSC327 (ROOT)
 |
 |-- Week 1
 |   |
@@ -31,6 +31,6 @@ ROOT (CSC327)
 '-- Week 2
     |
     '-- 3847 - The Seven Percent Solution [NOT WORKING]
-        |-- 3847-The_Seven_Percent_Solution.pdf
+        |-- 3847 - The Seven Percent Solution.pdf
 	|-- seven.in
 	'-- Seven.java
