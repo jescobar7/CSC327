@@ -6,11 +6,13 @@ public class Seven {
 		Scanner sc = new Scanner(System.in);	
 		boolean run = true;
 		String result = "";
+		char ch = ' ';
 		
 		while (run) {
 			String line = sc.nextLine();
 			
 			for (char c: line.toCharArray()) {
+				ch = c;
 				switch (c) {
 					case '#':
 						run = false;
@@ -41,7 +43,9 @@ public class Seven {
 						break;
 				}
 			}
-			System.out.println(result);
+			if (ch != '#') {
+				System.out.println(result);
+			}
 			result = "";
 		}
 	}
