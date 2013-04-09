@@ -5,10 +5,17 @@ public class Firefly {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);	
 		boolean run = true;
-		
-		while (sc.hasNextLine()) {
+		int firefly = 1;
+				
+		while (run) {
 			String line = sc.nextLine();
-			System.out.println(line);
+			String[] split = line.split("\\s+");
+			
+			if ((split.length == 3) && (Integer.parseInt(split[0]) == 0)) {
+				run = false;
+			} else {
+				
+			}
 		}
 	}
 }
