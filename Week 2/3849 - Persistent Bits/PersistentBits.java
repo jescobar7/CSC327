@@ -6,13 +6,13 @@ public class PersistentBits {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		boolean run = true;
-		int a; int b; int c; int seed; int x;
+		int a; int b; int c; int seed; int x; int xOld;
 		String[] tokens;
-		ArrayList<String> strArray = new ArrayList<String>(0);
+		String strOld = "";
+		String strNew = "";
 		
 		while (run) {
 			tokens = sc.nextLine().split(" ");
-			strArray = new ArrayList<String>();
 			int tLen = tokens.length;
 			if (tLen == 1) {
 				if (Integer.parseInt(tokens[0]) == 0) {
@@ -25,28 +25,44 @@ public class PersistentBits {
 				b = Integer.parseInt(tokens[1]);
 				c = Integer.parseInt(tokens[2]);
 				seed = Integer.parseInt(tokens[3]);
+				
 				x = seed;
-				strArray.add(pad(x));
-				System.out.println(pad(x));
+				//x2 = seed;
+				strOld = pad(x);
+				
 				x = calc(a,b,c,x);
+				//x2 = x;
+				strNew = pad(x);		
+				strOld = check(strOld, strNew);
+				
 				while (x != seed) {
-					strArray.add(pad(x));
-					System.out.println(pad(x));
+					//System.out.println(x);
 					x = calc(a,b,c,x);
+					strNew = pad(x);				
+					strOld = check(strOld, strNew);
 				}
 			}
+			System.out.println(strOld);
 		}
-		// for (int i = 0; i < strArray.size(); i++) {
-			// System.out.println(strArray.get(i));
-		// }
 	}
 	
 	public static int calc(int a, int b, int c, int x) {
 		return ((a*x)+ b)%c;
 	}
 	
-	public static String check(String s) {
+	public static String check(String strOld, String strNew) {
 		String result = "";
+		for (int i = 0; i < strOld.length(); i++) {
+			if (strOld.charAt(i) == '?') {
+				result = result + "?";
+			}
+			else if (strOld.charAt(i) == strNew.charAt(i)) {
+				result = result + strOld.charAt(i);
+			}
+			else {
+				result = result + "?";
+			}
+		}
 		return result;
 	}
 	
