@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PersistentBits {
@@ -25,21 +24,23 @@ public class PersistentBits {
 				b = Integer.parseInt(tokens[1]);
 				c = Integer.parseInt(tokens[2]);
 				seed = Integer.parseInt(tokens[3]);
-				
 				x = seed;
-				//x2 = seed;
-				strOld = pad(x);
+				xOld = seed;
 				
+				strOld = pad(x);
 				x = calc(a,b,c,x);
-				//x2 = x;
+				
 				strNew = pad(x);		
 				strOld = check(strOld, strNew);
 				
 				while (x != seed) {
-					//System.out.println(x);
+					xOld = x;
 					x = calc(a,b,c,x);
 					strNew = pad(x);				
 					strOld = check(strOld, strNew);
+					if (xOld == x) {
+						break;
+					}
 				}
 			}
 			System.out.println(strOld);
