@@ -27,7 +27,10 @@ CSC327 (ROOT)
     |   |-- 3847 - The Seven Percent Solution.pdf
     |   |-- seven.in
     |   '-- Seven.java
-    '-- 3849 - Persistent Bits [WORKING - EXCEEDS TIME LIMIT]
-        |-- 3849 - Persistent Bits.pdf
-        |-- input.in
-        '-- PersistentBits.java
+    |-- 3849 - Persistent Bits [WORKING - EXCEEDS TIME LIMIT]
+    |   |-- 3849 - Persistent Bits.pdf
+    |   |-- input.in
+    |   '-- PersistentBits.java
+    '-- FINAL [SUBMITTED]
+        |-- PersistentBits.java
+        '-- Seven.java
