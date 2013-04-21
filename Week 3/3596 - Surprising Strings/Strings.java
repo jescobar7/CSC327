@@ -20,15 +20,50 @@ public class Strings {
 				System.out.println(chars[0]+" is surprising.");
 			}
 			else {
-				HashMap one = new HashMap();
-				HashMap two = new HashMap();
-				HashMap three = new HashMap();
-				boolean oneUnique = false;
-				boolean twoUnique = false;
-				boolean threeUnique = false;
+				HashMap<String, String> oneMap = new HashMap<String, String>();
+				HashMap<String, String> twoMap = new HashMap<String, String>();
+				HashMap<String, String> threeMap = new HashMap<String, String>();
+				boolean oneUnique = true;
+				boolean twoUnique = true;
+				boolean threeUnique = true;
 				
 				for (int i = 0; i < 79; i++) {
-					
+					if (oneUnique) {
+						if (i+1 < chars.length) {
+							String newKey = "";
+							newKey = newKey + chars[i];
+							newKey = newKey + chars[i+1];
+							if (!oneMap.containsKey(newKey)) {
+								oneMap.put(newKey, newKey);
+							} else {
+								oneUnique = false;
+							}
+						}
+					}
+					if (twoUnique) {
+						if (i+2 < chars.length) {
+							String newKey = "";
+							newKey = newKey + chars[i];
+							newKey = newKey + chars[i+2];
+							if (!twoMap.containsKey(newKey)) {
+								twoMap.put(newKey, newKey);
+							} else {
+								twoUnique = false;
+							}
+						}
+					}
+					if (threeUnique) {
+						if (i+3 < chars.length) {
+							String newKey = "";
+							newKey = newKey + chars[i];
+							newKey = newKey + chars[i+3];
+							if (!threeMap.containsKey(newKey)) {
+								threeMap.put(newKey, newKey);
+							} else {
+								threeUnique = false;
+							}
+						}
+					}
 				}
 				
 				if (oneUnique == true && twoUnique == true && threeUnique == true) {
