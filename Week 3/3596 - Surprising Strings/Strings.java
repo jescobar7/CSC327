@@ -3,71 +3,49 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Strings {
+	private static char STAR = '*';
+	private static String UNIQUE = "unique";
+	private static String BOOL_TRUE = "true";
+	private static String STR_VAL_TRUE = "true";
+	private static String STR_VAL_FALSE = "false";
+	
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put(UNIQUE, STR_VAL_TRUE);
 		boolean run = true;
 		char[] chars;
-		char STAR = '*';
 		
 		while (run) {
 			chars = sc.nextLine().toCharArray();
 			chars = charString(chars).toCharArray();
+			int len = chars.length;
 			
-			if (chars.length > 0 && chars.length <= 79) {
+			if (len > 0 && len <= 79) {
 				if (chars[0] == STAR) {
 					run = false;
 				}
-				else if (chars.length == 1) {
+				else if (len == 1) {
 					System.out.println(charString(chars)+" is surprising.");
 				}
 				else {
-					HashMap<String, String> zeroMap = new HashMap<String, String>();
-					HashMap<String, String> oneMap = new HashMap<String, String>();
-					HashMap<String, String> twoMap = new HashMap<String, String>();
-					boolean zeroUnique = true;
-					boolean oneUnique = true;
-					boolean twoUnique = true;
-					int len = chars.length;
+					map = new HashMap<String, String>();
+					map.put(UNIQUE, STR_VAL_TRUE);
 					
+					int d = 1;
 					for (int i = 0; i < len; i++) {
-						if (zeroUnique) {
-							if (i+1 < len) {
-								String newKey = Character.toString(chars[i]) + chars[i+1];
-								if (!(zeroMap.containsKey(newKey))) {
-									zeroMap.put(newKey, newKey);
-								} else {
-									zeroUnique = false;
-								}
-							}
-						}
-						if (oneUnique) {
-							if (i+2 < len) {
-								String newKey = Character.toString(chars[i]) + chars[i+2];
-								if (!(oneMap.containsKey(newKey))) {
-									oneMap.put(newKey, newKey);
-								} else {
-									oneUnique = false;
-								}
-							}
-						}
-						if (twoUnique) {
-							if (i+3 < len) {
-								String newKey = Character.toString(chars[i]) + chars[i+3];
-								if (!(twoMap.containsKey(newKey))) {
-									twoMap.put(newKey, newKey);
-								} else {
-									twoUnique = false;
-								}
-							}
+						System.out.println(chars+" "+d+" "+map);
+						if (map.get(UNIQUE) == BOOL_TRUE) {
+							map = dUnique(chars, d, map);
+							d++;
 						}
 					}
-					
-					if (zeroUnique && oneUnique && twoUnique) {
-						System.out.println(charString(chars)+" is surprising.");
-					}
-					else {
-						System.out.println(charString(chars)+" is NOT surprising.");
-					}
+				}
+				if (map.get(UNIQUE) == BOOL_TRUE) {
+					System.out.println(charString(chars)+" is surprising.");
+				}
+				else {
+					System.out.println(charString(chars)+" is NOT surprising.");
 				}
 			}
 		}
@@ -81,5 +59,20 @@ public class Strings {
 			}
 		}
 		return cString;
+	}
+	
+	public static HashMap<String, String> dUnique(char[] cArray, int d, HashMap<String, String> map) {
+		int len = cArray.length;
+		for (int i = 0; i < len; i++) {
+			if (i+d < len) {
+				String newKey = Character.toString(cArray[i]) + cArray[i+d];
+				if (!(map.containsKey(newKey))) {
+					map.put(newKey, STR_VAL_TRUE);
+				} else {
+					map.put(UNIQUE,STR_VAL_FALSE);
+				}
+			}
+		}
+		return map;
 	}
 }
