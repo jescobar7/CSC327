@@ -22,15 +22,37 @@ CSC327 (ROOT)
 |   '-- FINAL [SUBMITTED]
 |       |-- parity.java
 |       '-- steg.java
-'-- Week 2
-    |-- 3847 - The Seven Percent Solution [WORKING]
-    |   |-- 3847 - The Seven Percent Solution.pdf
-    |   |-- seven.in
-    |   '-- Seven.java
-    |-- 3849 - Persistent Bits [WORKING - EXCEEDS TIME LIMIT]
-    |   |-- 3849 - Persistent Bits.pdf
+|-- Week 2
+|   |-- 3847 - The Seven Percent Solution [WORKING]
+|   |   |-- 3847 - The Seven Percent Solution.pdf
+|   |   |-- seven.in
+|   |   '-- Seven.java
+|   |-- 3849 - Persistent Bits [WORKING - EXCEEDS TIME LIMIT]
+|   |   |-- 3849 - Persistent Bits.pdf
+|   |   |-- input.in
+|   |   '-- PersistentBits.java
+|   '-- FINAL [SUBMITTED]
+|       |-- PersistentBits.java
+|       '-- Seven.java
+'-- Week 3
+    |-- 3594 - Quicksum [WORKING]
+    |   |-- 3594 - Quicksum.pdf
     |   |-- input.in
-    |   '-- PersistentBits.java
+    |   '-- Quicksum.java
+    |-- 3595 - Linear Pachinko [NOT WORKING]
+    |   |-- 3595 - Linear Pachinko.pdf
+    |   |-- input.in
+    |   '-- Pachinko.java
+    |-- 3596 - Surprise Strings [NOT WORKING - WRONG ANSWER]
+    |   |-- 3596 - Surprise Strings.pdf
+    |   |-- input.in
+    |   '-- Strings.java
+    |-- 3600 - Root of the Problem [WORKING]
+    |   |-- 3600 - Root of the Problem.pdf
+    |   |-- input.in
+    |   '-- Root.java
     '-- FINAL [SUBMITTED]
-        |-- PersistentBits.java
-        '-- Seven.java
+        |-- Quicksum.java
+        |-- Root.java
+        '-- Strings.java
+   
