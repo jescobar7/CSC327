@@ -34,25 +34,36 @@ CSC327 (ROOT)
 |   '-- FINAL [SUBMITTED]
 |       |-- PersistentBits.java
 |       '-- Seven.java
-'-- Week 3
-    |-- 3594 - Quicksum [WORKING]
-    |   |-- 3594 - Quicksum.pdf
+|-- Week 3
+|   |-- 3594 - Quicksum [WORKING]
+|   |   |-- 3594 - Quicksum.pdf
+|   |   |-- input.in
+|   |   '-- Quicksum.java
+|   |-- 3595 - Linear Pachinko [NOT WORKING]
+|   |   |-- 3595 - Linear Pachinko.pdf
+|   |   |-- input.in
+|   |   '-- Pachinko.java
+|   |-- 3596 - Surprise Strings [NOT WORKING - WRONG ANSWER]
+|   |   |-- 3596 - Surprise Strings.pdf
+|   |   |-- input.in
+|   |   '-- Strings.java
+|   |-- 3600 - Root of the Problem [WORKING]
+|   |   |-- 3600 - Root of the Problem.pdf
+|   |   |-- input.in
+|   |   '-- Root.java
+|   '-- FINAL [SUBMITTED]
+|       |-- Quicksum.java
+|       |-- Root.java
+|       '-- Strings.java
+'-- Week 4
+    |-- 3391 - Overflowing Bookshelf [WORKING]
+    |   |-- 3391 - Overflowing Bookshelf.pdf
     |   |-- input.in
-    |   '-- Quicksum.java
-    |-- 3595 - Linear Pachinko [NOT WORKING]
-    |   |-- 3595 - Linear Pachinko.pdf
+    |   '-- Bookshelf.java
+    |-- 3398 - Netiquette [WORKING]
+    |   |-- 3398 - Netiquette.pdf
     |   |-- input.in
-    |   '-- Pachinko.java
-    |-- 3596 - Surprise Strings [NOT WORKING - WRONG ANSWER]
-    |   |-- 3596 - Surprise Strings.pdf
-    |   |-- input.in
-    |   '-- Strings.java
-    |-- 3600 - Root of the Problem [WORKING]
-    |   |-- 3600 - Root of the Problem.pdf
-    |   |-- input.in
-    |   '-- Root.java
+    |   '-- Netiquette.java
     '-- FINAL [SUBMITTED]
-        |-- Quicksum.java
-        |-- Root.java
-        '-- Strings.java
-   
+        |-- Bookshelf.java
+        '-- Netiquette.java 
