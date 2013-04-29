@@ -26,11 +26,17 @@ public class Bookshelf {
 					System.out.print("--PROBLEM "+probNum+": ");
 					if (shelf.size() > 0) {
 						String[] tmp;
-						for (int i = 0; i < shelf.size()-1; i++) {
+						// for (int i = 0; i < shelf.size()-1; i++) {
+							// tmp = shelf.get(i).split(" ");
+							// System.out.print(tmp[0]+" ");
+						// }
+						// tmp = shelf.get(shelf.size()-1).split(" ");
+						// System.out.print(tmp[0]);
+						for (int i = shelf.size()-1; i > 0; i--) {
 							tmp = shelf.get(i).split(" ");
 							System.out.print(tmp[0]+" ");
 						}
-						tmp = shelf.get(shelf.size()-1).split(" ");
+						tmp = shelf.get(0).split(" ");
 						System.out.print(tmp[0]);
 					}
 					System.out.print("\n");
