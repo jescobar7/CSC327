@@ -1,4 +1,7 @@
 *.class
+*.zip
+maths.txt
+out.txt
 
 # Package Files #
 *.jar
