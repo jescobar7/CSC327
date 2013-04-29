@@ -23,23 +23,15 @@ public class Bookshelf {
 					break;
 				}
 				else if (c == 'E') {
-					System.out.print("--PROBLEM "+probNum+": ");
+					System.out.print("PROBLEM "+probNum+":");
 					if (shelf.size() > 0) {
 						String[] tmp;
-						// for (int i = 0; i < shelf.size()-1; i++) {
-							// tmp = shelf.get(i).split(" ");
-							// System.out.print(tmp[0]+" ");
-						// }
-						// tmp = shelf.get(shelf.size()-1).split(" ");
-						// System.out.print(tmp[0]);
-						for (int i = shelf.size()-1; i > 0; i--) {
+						for (int i = shelf.size()-1; i >= 0; i--) {
 							tmp = shelf.get(i).split(" ");
-							System.out.print(tmp[0]+" ");
+							System.out.print(" "+tmp[0]);
 						}
-						tmp = shelf.get(0).split(" ");
-						System.out.print(tmp[0]);
 					}
-					System.out.print("\n");
+					System.out.println();
 					probNum++;
 					shelf = new ArrayList<String>();
 					shelfSize = 0;
@@ -49,13 +41,11 @@ public class Bookshelf {
 				}
 				else {
 					shelfSize = Integer.parseInt(tokens[0]);
-					System.out.println("==== SHELF CAPACITY: "+shelfSize+ "====");
 				}
 			}
 			else if (len == 2) {
 				if (c == 'R') {
 					bookId = Integer.parseInt(tokens[1]);
-					System.out.println("REMOVING BOOK "+bookId);
 					if (!shelf.isEmpty()) {
 						for (int i = 0; i < shelf.size(); i++) {
 							String[] book = shelf.get(i).split(" ");
@@ -64,13 +54,8 @@ public class Bookshelf {
 							if (bId == bookId) {
 								shelf.remove(i);
 								currentShelf -= bSize;
-								System.out.println("FOUND: "+bId);
-								System.out.println("NEW SHELF SIZE: "+currentShelf);
 							}
 						}
-					}
-					else {
-						System.out.println("BOOK "+bookId+" NOT FOUND!");
 					}
 				}
 			}
@@ -80,17 +65,13 @@ public class Bookshelf {
 					bookSize = Integer.parseInt(tokens[2]);
 					String book = bookId+" "+bookSize;
 					shelf.add(book);
-					System.out.println("ADDED BOOK "+bookId+" W/ SIZE "+bookSize);
 					currentShelf += bookSize;
-					System.out.println("NEW SHELF SIZE: "+currentShelf);
 					while (currentShelf > shelfSize) {
 						String[] lastBook = shelf.get(0).split(" ");
 						int lastBookId = Integer.parseInt(lastBook[0]);
 						int lastBookSize = Integer.parseInt(lastBook[1]);
 						shelf.remove(0);
 						currentShelf-=lastBookSize;
-						System.out.println("BOOK "+lastBookId+" FALLS!");
-						System.out.println("NEW SHELF SIZE: "+currentShelf);
 					}
 				}
 			}
