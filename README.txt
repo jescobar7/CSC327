@@ -55,15 +55,36 @@ CSC327 (ROOT)
 |       |-- Quicksum.java
 |       |-- Root.java
 |       '-- Strings.java
-'-- Week 4
-    |-- 3391 - Overflowing Bookshelf [WORKING]
-    |   |-- 3391 - Overflowing Bookshelf.pdf
+|-- Week 4
+|   |-- 3391 - Overflowing Bookshelf [WORKING]
+|   |   |-- 3391 - Overflowing Bookshelf.pdf
+|   |   |-- input.in
+|   |   '-- Bookshelf.java
+|   |-- 3398 - Netiquette [WORKING]
+|   |   |-- 3398 - Netiquette.pdf
+|   |   |-- input.in
+|   |   '-- Netiquette.java
+|   '-- FINAL [SUBMITTED]
+|       |-- Bookshelf.java
+|       '-- Netiquette.java
+'-- Week 5
+    |-- 3055 - Symmetric Order [WORKING?]
+    |   |-- 3055 - Symmetric Order.pdf
     |   |-- input.in
-    |   '-- Bookshelf.java
-    |-- 3398 - Netiquette [WORKING]
-    |   |-- 3398 - Netiquette.pdf
+    |   '-- Symmetric.java
+    |-- 3056 - Flow Layout [WORKING?]
+    |   |-- 3056 - Flow Layout.pdf
     |   |-- input.in
-    |   '-- Netiquette.java
+    |   '-- FLow.java
+    |-- 3057 - Permutation Code [NOT WORKING]
+    |   |-- 3057 - Permutation Code.pdf
+    |   |-- input.in
+    |   '-- PermutationCode.java
+    |-- 3059 - Speed Limit [WORKING?]
+    |   |-- 3059 - Speed Limit.pdf
+    |   |-- input.in
+    |   '-- SpeedLimit.java
     '-- FINAL [SUBMITTED]
-        |-- Bookshelf.java
-        '-- Netiquette.java 
+        |-- Flow.java
+        |-- SpeedLimit.java
+        '-- Symmetric.java
