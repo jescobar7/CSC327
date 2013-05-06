@@ -9,14 +9,13 @@ public class Flow {
 		int currentHeight = 0;
 		int oldWidth = 0;
 		int oldHeight = 0;
+		boolean add = false;
 			
 		while (true) {
 			String[] line = sc.nextLine().split(" ");
 			int len = line.length;
 			if (len == 1) {
 				maxWidth = Integer.parseInt(line[0]);
-				System.out.println();
-				System.out.println("MAX_WIDTH: "+maxWidth); // PRINT STATEMENT
 				if (maxWidth == 0) {
 					break;
 				}
@@ -24,10 +23,13 @@ public class Flow {
 			else if (len == 2) {
 				int width = Integer.parseInt(line[0]);
 				int height = Integer.parseInt(line[1]);
-				System.out.println("WIDTH: "+width+" | HEIGHT: "+height); // PRINT STATEMENT
 				
 				if (width == -1 && height == -1) {
-					System.out.println(currentWidth+" x "+currentHeight); // PRINT STATEMENT
+					if (add) {
+						currentHeight+=oldHeight;
+						add = false;
+					}
+					System.out.println(currentWidth+" x "+currentHeight);
 					maxWidth = 0;
 					currentWidth = 0;
 					currentHeight = 0;
@@ -39,26 +41,19 @@ public class Flow {
 					if (currentHeight < height) {
 						currentHeight = height;
 					}
-					System.out.println("NEW_WIDTH: "+currentWidth+" | NEW_HEIGHT: "+currentHeight); // PRINT STATEMENT
-					System.out.println("--OLD_HEIGHT: "+oldHeight);
 				}
 				else if((currentWidth + width) > maxWidth) {
 					oldWidth = currentWidth;
 					oldHeight = currentHeight;
-					//currentHeight = 0;
 					if (currentWidth < width) {
 						currentWidth = width;
 					}
 					if (currentHeight < height) {
 						currentHeight += height;
 					} else {
-						System.out.println("C: "+currentHeight);
-						System.out.println("O: "+oldHeight);
-						System.out.println("H: "+height);
-						//oldHeight = height;
+						add = true;
+						oldHeight = height;
 					}
-					System.out.println("NEW_WIDTH: "+currentWidth+" | NEW_HEIGHT: "+oldHeight); // PRINT STATEMENT
-					System.out.println("--OLD_HEIGHT: "+oldHeight);
 				}
 			}
 		}
