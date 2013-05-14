@@ -29,7 +29,8 @@ public class Robots {
 				break;
 			}
 			else if (x==0 && y==0) {
-				int garbage = file.size();				
+				int garbage = file.size();
+				System.out.println("==TOTAL GARBAGE==: "+garbage);
 				while (garbage > 0) {
 					garbage = garbage - robot(xMax, yMax);
 					robots++;
@@ -50,6 +51,7 @@ public class Robots {
 	public static int robot(int x, int y) {
 		if (field == null) {
 			field = new int[x][y];
+			System.out.println("NEW FIELD!!!!");
 		}
 		int xMax = -1;
 		int yMax = -1;
@@ -83,7 +85,7 @@ public class Robots {
 					}
 				}
 			}
-			System.out.println(xMax+":"+yMax);
+			System.out.println("("+xMax+","+yMax+")");
 		}
 		System.out.println();
 		System.out.println("GARBAGE COLLECTED: "+garbage);
