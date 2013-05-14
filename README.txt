@@ -67,24 +67,41 @@ CSC327 (ROOT)
 |   '-- FINAL [SUBMITTED]
 |       |-- Bookshelf.java
 |       '-- Netiquette.java
-'-- Week 5
-    |-- 3055 - Symmetric Order [WORKING?]
-    |   |-- 3055 - Symmetric Order.pdf
+|-- Week 5
+|   |-- 3055 - Symmetric Order [WORKING]
+|   |   |-- 3055 - Symmetric Order.pdf
+|   |   |-- input.in
+|   |   '-- Symmetric.java
+|   |-- 3056 - Flow Layout [WRONG ANSWER]
+|   |   |-- 3056 - Flow Layout.pdf
+|   |   |-- input.in
+|   |   '-- FLow.java
+|   |-- 3057 - Permutation Code [NOT WORKING]
+|   |   |-- 3057 - Permutation Code.pdf
+|   |   |-- input.in
+|   |   '-- PermutationCode.java
+|   |-- 3059 - Speed Limit [WORKING]
+|   |   |-- 3059 - Speed Limit.pdf
+|   |   |-- input.in
+|   |   '-- SpeedLimit.java
+|   '-- FINAL [SUBMITTED]
+|       |-- Flow.java
+|       |-- SpeedLimit.java
+|       '-- Symmetric.java
+'-- Week 6
+    |-- 2782 - Clay Bully [WORKING]
+    |   |-- 2782 - Clay Bully.pdf
     |   |-- input.in
-    |   '-- Symmetric.java
-    |-- 3056 - Flow Layout [WORKING?]
-    |   |-- 3056 - Flow Layout.pdf
+    |   '-- Clay.java
+    |-- 2783 - Robots [WORKING]
+    |   |-- 2783 - Robots.pdf
     |   |-- input.in
-    |   '-- FLow.java
-    |-- 3057 - Permutation Code [NOT WORKING]
-    |   |-- 3057 - Permutation Code.pdf
+    |   '-- Robots.java
+    |-- 2787 - Doubles [WORKING]
+    |   |-- 2787 - Doubles.pdf
     |   |-- input.in
-    |   '-- PermutationCode.java
-    |-- 3059 - Speed Limit [WORKING?]
-    |   |-- 3059 - Speed Limit.pdf
-    |   |-- input.in
-    |   '-- SpeedLimit.java
+    |   '-- Doubles.java
     '-- FINAL [SUBMITTED]
-        |-- Flow.java
-        |-- SpeedLimit.java
-        '-- Symmetric.java
+        |-- Clay.java
+        |-- Robots.java
+	'-- Doubles.java
