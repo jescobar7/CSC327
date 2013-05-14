@@ -30,13 +30,8 @@ public class Robots {
 			}
 			else if (x==0 && y==0) {
 				int garbage = file.size();
-				System.out.println("==TOTAL GARBAGE==: "+garbage);
-				// while (garbage > 0) {
-					// garbage = garbage - robot(xMax, yMax);
-					// robots++;
-				// }
 				robots = robot(xMax, yMax, garbage);
-				System.out.println("TOTAL ROBOTS: "+robots);
+				System.out.println(robots);
 				xMax = 0;
 				yMax = 0;
 				robots = 0;
@@ -52,7 +47,6 @@ public class Robots {
 	public static int robot(int x, int y, int g) {
 		if (field == null) {
 			field = new int[x][y];
-			System.out.println("NEW FIELD!!!!");
 		}
 		int xMax = -1;
 		int yMax = -1;
@@ -66,17 +60,7 @@ public class Robots {
 			field[x1-1][x2-1] = 1;
 		}
 		
-		while (g > garbage) {
-			System.out.println("PRINT FIELD");
-			for (int i = 0; i < x; i++) {
-				for (int j = 0; j < y; j++) {
-					System.out.print(field[i][j]+" ");
-				}
-				System.out.println();
-			}
-			System.out.println();
-			
-			System.out.println("ROBOT CLEANUP...");
+		while (g > garbage) {			
 			for (int i = 0; i < x; i++) {
 				for (int j = 0; j < y; j++) {
 					if (field[i][j] == 1) {
@@ -88,10 +72,7 @@ public class Robots {
 						}
 					}
 				}
-				System.out.println("("+xMax+","+yMax+")");
 			}
-			System.out.println();
-			System.out.println("GARBAGE COLLECTED: "+garbage);
 			robots++;
 			xMax = -1;
 			yMax = -1;
