@@ -88,20 +88,27 @@ CSC327 (ROOT)
 |       |-- Flow.java
 |       |-- SpeedLimit.java
 |       '-- Symmetric.java
-'-- Week 6
-    |-- 2782 - Clay Bully [WORKING]
-    |   |-- 2782 - Clay Bully.pdf
+|-- Week 6
+|   |-- 2782 - Clay Bully [WORKING]
+|   |   |-- 2782 - Clay Bully.pdf
+|   |   |-- input.in
+|   |   '-- Clay.java
+|   |-- 2783 - Robots [WORKING]
+|   |   |-- 2783 - Robots.pdf
+|   |   |-- input.in
+|   |   '-- Robots.java
+|   |-- 2787 - Doubles [WORKING]
+|   |   |-- 2787 - Doubles.pdf
+|   |   |-- input.in
+|   |   '-- Doubles.java
+|   '-- FINAL [SUBMITTED]
+|       |-- Clay.java
+|       |-- Robots.java
+|	'-- Doubles.java
+'-- Week 7
+    |-- 2789 - Tournament [NOT WORKING]
+    |   |-- 2789 - Tournament.pdf
     |   |-- input.in
-    |   '-- Clay.java
-    |-- 2783 - Robots [WORKING]
-    |   |-- 2783 - Robots.pdf
-    |   |-- input.in
-    |   '-- Robots.java
-    |-- 2787 - Doubles [WORKING]
-    |   |-- 2787 - Doubles.pdf
-    |   |-- input.in
-    |   '-- Doubles.java
+    |   '-- Tournament.java
     '-- FINAL [SUBMITTED]
-        |-- Clay.java
-        |-- Robots.java
-	'-- Doubles.java
+ 	'-- Tournament.java
