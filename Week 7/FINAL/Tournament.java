@@ -68,10 +68,10 @@ public class Tournament {
 				tmpRoot = new Node(id, line[1]);
 				root.setRightChild(tmpRoot);
 				
-				// while (!(root.getRightChild() == null)) {
+				// while (!(root.getLeftChild() == null)) {
 					
 				// }
-				// while (!(root.getLeftChild() == null)) {
+				// while (!(root.getRightChild() == null)) {
 					
 				// }
 			}
