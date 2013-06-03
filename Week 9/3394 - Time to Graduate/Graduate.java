@@ -6,28 +6,53 @@ public class Graduate {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		String[] line;
-		String[] classList;
-		ArrayList<String[]> classes = new ArrayList<String[]>();
+		ArrayList<String> required = new ArrayList<String>();
+		ArrayList<String[]> prereqs = new ArrayList<String[]>();
+		ArrayList<String> taken = new ArrayList<String>();
 		boolean run = true;
 		int semesters = 0;
 		int lineNum = 0;
-		int dataset = -1;
-		int maxClasses = -1;
-		int prereqs = 0;
-		int set = 0; // lol!
+		int numOfClasses = 0;
+		int maxClassSem = 0;
+		int prereqNum = 0;
 		
 		while (run) {
 			line = sc.nextLine().split(" ");
 			
 			if (line.length == 2) {
-				if (dataset!=-1 && maxClasses!=-1) {
+				if (numOfClasses!=0 && maxClassSem!=0) {
 					//Run prereq check here!
-					set++; // lol!
-					if (set == 3) { // lol!
-						semesters = classes.size()-2;
-					} else {
-						semesters = classes.size()+1;
+					
+					//**** START PRINT INFO
+					System.out.print("Required: ");
+					for (int i=0; i < required.size(); i++) {
+						System.out.print(required.get(i)+" ");
 					}
+					System.out.println();
+					
+					System.out.println("Class Info: ");
+					for (int i=0; i < 3; i++) {
+						String[] data = prereqs.get(i);
+						System.out.println("\tClass   : "+data[0]);
+						System.out.println("\tOffered : "+data[1]);
+						prereqNum = Integer.parseInt(data[2]);
+						System.out.print("\tPrereqs : "+prereqNum);
+						if (prereqNum > 0) {
+							System.out.print(" - ");
+							for (int j=3; j < data.length; j++) {
+								System.out.print(data[j]+" ");
+							}
+						}
+						System.out.println();
+					}
+					
+					System.out.print("Taken: ");
+					for (int i=0; i < taken.size(); i++) {
+						System.out.print(taken.get(i)+" ");
+					}
+					System.out.println();
+					//**** END PRINT INFO
+					
 					System.out.println("The minimum number of semesters required to graduate is "+semesters+".");
 				}
 				int first = Integer.parseInt(line[0]);
@@ -36,18 +61,22 @@ public class Graduate {
 					run = false;
 				}
 				else {
-					classes = new ArrayList<String[]>();
-					dataset = first;
-					maxClasses = second;
+					required = new ArrayList<String>();
+					prereqs = new ArrayList<String[]>();
+					taken = new ArrayList<String>();
+					numOfClasses = first;
+					maxClassSem = second;
 					lineNum = 2;
 				}
 			}
 			else if (lineNum == 2) {
-				classList = line;
+				for (int i=0; i < line.length; i++) {
+					required.add(line[i]);
+				}
 				lineNum++;
 			}
 			else if (lineNum >= 3) {
-				classes.add(line);
+				prereqs.add(line);
 				lineNum++;
 			}
 		}
