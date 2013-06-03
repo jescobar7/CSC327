@@ -24,14 +24,14 @@ public class Graduate {
 					//Run prereq check here!
 					
 					//**** START PRINT INFO
-					System.out.print("Required: ");
+					System.out.print("\nRequired: ");
 					for (int i=0; i < required.size(); i++) {
 						System.out.print(required.get(i)+" ");
 					}
 					System.out.println();
 					
 					System.out.println("Class Info: ");
-					for (int i=0; i < 3; i++) {
+					for (int i=0; i < required.size(); i++) {
 						String[] data = prereqs.get(i);
 						System.out.println("\tClass   : "+data[0]);
 						System.out.println("\tOffered : "+data[1]);
@@ -50,7 +50,7 @@ public class Graduate {
 					for (int i=0; i < taken.size(); i++) {
 						System.out.print(taken.get(i)+" ");
 					}
-					System.out.println();
+					System.out.println("\n");
 					//**** END PRINT INFO
 					
 					System.out.println("The minimum number of semesters required to graduate is "+semesters+".");
