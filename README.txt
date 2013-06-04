@@ -105,10 +105,24 @@ CSC327 (ROOT)
 |       |-- Clay.java
 |       |-- Robots.java
 |	'-- Doubles.java
-'-- Week 7
-    |-- 2789 - Tournament [NOT WORKING]
-    |   |-- 2789 - Tournament.pdf
+|-- Week 7
+|   |-- 2789 - Tournament [NOT WORKING]
+|   |   |-- 2789 - Tournament.pdf
+|   |   |-- input.in
+|   |   '-- Tournament.java
+|   '-- FINAL [SUBMITTED]
+|	'-- Tournament.java
+|-- Week 8
+|   |-- 3054 - Triangle Cuts [NOT WORKING]
+|   |   |-- 3054 - Triangle Cuts.pdf
+|   |   |-- input.in
+|   |   '-- triangle.java
+|   '-- FINAL [SUBMITTED] (N/A)
+|	'-- (N/A)
+'-- Week 9
+    |-- 3394 - Time to Graduate [NOT WORKING]
+    |   |-- 3394 - Time to Graduate.pdf
     |   |-- input.in
-    |   '-- Tournament.java
+    |   '-- Graduate.java
     '-- FINAL [SUBMITTED]
- 	'-- Tournament.java
+ 	'-- Graduate.java
