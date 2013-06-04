@@ -21,37 +21,73 @@ public class Graduate {
 			
 			if (line.length == 2) {
 				if (numOfClasses!=0 && maxClassSem!=0) {
-					//Run prereq check here!
+					int curNumOfClasses = 0;
+					char curSem = 'F';
 					
-					//**** START PRINT INFO
-					System.out.print("\nRequired: ");
-					for (int i=0; i < required.size(); i++) {
-						System.out.print(required.get(i)+" ");
-					}
-					System.out.println();
-					
-					System.out.println("Class Info: ");
-					for (int i=0; i < required.size(); i++) {
-						String[] data = prereqs.get(i);
-						System.out.println("\tClass   : "+data[0]);
-						System.out.println("\tOffered : "+data[1]);
-						prereqNum = Integer.parseInt(data[2]);
-						System.out.print("\tPrereqs : "+prereqNum);
-						if (prereqNum > 0) {
-							System.out.print(" - ");
-							for (int j=3; j < data.length; j++) {
-								System.out.print(data[j]+" ");
+					while ((curNumOfClasses < maxClassSem)) {
+						for (int i=0; i < required.size(); i++) {
+							String[] data = prereqs.get(i);
+							String className = data[0];
+							char semesterOffered = (data[1]).charAt(0);
+							int prereqClasses = Integer.parseInt(data[2]);
+							if ((semesterOffered == curSem) || (semesterOffered == 'B')) {
+								if (prereqClasses != 0 ) {
+									for (int j=3; j < data.length; j++) {
+										if (!taken.contains(data[j])) {
+											break;
+										}
+										else {
+											taken.add(className);
+											curNumOfClasses++;
+										}
+									}
+								}
+								else {
+									taken.add(className);
+									curNumOfClasses++;
+								}
 							}
 						}
-						System.out.println();
+						if (curSem == 'F') {
+							curSem = 'S';
+						} else {
+							curSem = 'F';
+						}
 					}
+					semesters = curNumOfClasses;
+					//Run prereq check here!
 					
-					System.out.print("Taken: ");
-					for (int i=0; i < taken.size(); i++) {
-						System.out.print(taken.get(i)+" ");
-					}
-					System.out.println("\n");
-					//**** END PRINT INFO
+					//**** START PRINT INFO ****//
+					// System.out.println("\nNumber of Classes Required : "+numOfClasses);
+					// System.out.println("Max Classes Per Semester   : "+maxClassSem);
+					// System.out.print("\nRequired: ");
+					// for (int i=0; i < required.size(); i++) {
+						// System.out.print(required.get(i)+" ");
+					// }
+					// System.out.println();
+					
+					// System.out.println("Class Info: ");
+					// for (int i=0; i < required.size(); i++) {
+						// String[] data = prereqs.get(i);
+						// System.out.println("\tClass   : "+data[0]);
+						// System.out.println("\tOffered : "+data[1]);
+						// prereqNum = Integer.parseInt(data[2]);
+						// System.out.print("\tPrereqs : "+prereqNum);
+						// if (prereqNum > 0) {
+							// System.out.print(" - ");
+							// for (int j=3; j < data.length; j++) {
+								// System.out.print(data[j]+" ");
+							// }
+						// }
+						// System.out.println();
+					// }
+					
+					// System.out.print("Taken: ");
+					// for (int i=0; i < taken.size(); i++) {
+						// System.out.print(taken.get(i)+" ");
+					// }
+					// System.out.println("\n");
+					//**** END PRINT INFO ****//
 					
 					System.out.println("The minimum number of semesters required to graduate is "+semesters+".");
 				}
@@ -66,6 +102,7 @@ public class Graduate {
 					taken = new ArrayList<String>();
 					numOfClasses = first;
 					maxClassSem = second;
+					prereqNum = 0;
 					lineNum = 2;
 				}
 			}
