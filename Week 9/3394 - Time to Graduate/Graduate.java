@@ -24,7 +24,7 @@ public class Graduate {
 					int curNumOfClasses = 0;
 					char curSem = 'F';
 					
-					while ((curNumOfClasses < maxClassSem)) {
+					while (taken.size() < required.size()) {
 						for (int i=0; i < required.size(); i++) {
 							String[] data = prereqs.get(i);
 							String className = data[0];
@@ -48,11 +48,13 @@ public class Graduate {
 								}
 							}
 						}
-						if (curSem == 'F') {
-							curSem = 'S';
-						} else {
-							curSem = 'F';
-						}
+						//if (curNumOfClasses >= maxClassSem) {
+							if (curSem == 'F') {
+								curSem = 'S';
+							} else {
+								curSem = 'F';
+							}
+						//}
 					}
 					semesters = curNumOfClasses;
 					//Run prereq check here!
